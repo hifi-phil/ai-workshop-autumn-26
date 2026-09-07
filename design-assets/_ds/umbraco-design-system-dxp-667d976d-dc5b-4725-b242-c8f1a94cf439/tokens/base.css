@@ -1,0 +1,30 @@
+/* ============================================================
+   BASE — backoffice canvas defaults
+   Mirrors the backoffice <body class="uui-font uui-text"> on a neutral sand
+   background. Kept minimal so specimen cards and kits inherit cleanly.
+   ============================================================ */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: var(--uui-font-family);
+}
+
+body {
+	margin: 0;
+	font-family: var(--uui-font-family);
+	font-size: var(--uui-type-default-size);
+	line-height: 21px;
+	color: var(--uui-color-text);
+	background-color: var(--uui-color-background);
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Apply the same root classes the real backoffice puts on <body>. */
+body.uui-font.uui-text {
+	font-family: var(--uui-font-family);
+}

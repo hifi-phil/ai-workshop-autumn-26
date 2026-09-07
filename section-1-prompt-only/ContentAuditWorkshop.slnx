@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ContentAuditWorkshop/ContentAuditWorkshop.csproj" />
+  <Project Path="ContentAudit/ContentAudit.csproj" />
+</Solution>

@@ -1,0 +1,14 @@
+{
+  "id": "ContentAudit",
+  "name": "ContentAudit",
+  "version": "0.0.0",
+  "allowTelemetry": true,
+  "extensions": [
+    {
+      "name": "Content Audit Bundle",
+      "alias": "ContentAudit.Bundle",
+      "type": "bundle",
+      "js": "/App_Plugins/ContentAudit/content-audit.js"
+    }
+  ]
+}
