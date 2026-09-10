@@ -7,10 +7,10 @@
   
   <ItemGroup>
     <!-- Umbraco API packages - Used by extension templates -->
-    <PackageVersion Include="Umbraco.Cms.Api.Common" Version="18.1.2" />
-    <PackageVersion Include="Umbraco.Cms.Api.Management" Version="18.1.2" />
-    <PackageVersion Include="Umbraco.Cms.Web.Common" Version="18.1.2" />
-    <PackageVersion Include="Umbraco.Cms.Web.Website" Version="18.1.2" />
+    <PackageVersion Include="Umbraco.Cms.Api.Common" Version="18.1.1" />
+    <PackageVersion Include="Umbraco.Cms.Api.Management" Version="18.1.1" />
+    <PackageVersion Include="Umbraco.Cms.Web.Common" Version="18.1.1" />
+    <PackageVersion Include="Umbraco.Cms.Web.Website" Version="18.1.1" />
     <PackageVersion Include="Microsoft.AspNetCore.OpenApi" Version="10.0.10" />
   </ItemGroup>
 </Project>
