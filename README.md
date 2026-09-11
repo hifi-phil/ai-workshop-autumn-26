@@ -14,18 +14,27 @@ At each level, more information is added for the agent to use to generate a more
 Run the above prompt in a Claude session in the `/section-1-prompt-only` directory.
 
 > [!NOTE]
-> A single test run took ~1h 12min and ~800k tokens
+> Test run timing: 
+> - A single test run took ~26 min and ~208k tokens
+
+### Example outcome
+![alt text](assets/image.png)
 
 ## Section 2: With Context
 A design has been created and can be found in the `design-assets` folder. This is automatically added to the context when running Claude in the `/section-2-with-context` directory.
 
-Run the same prompt as above, now with added context. 
+Run the same prompt as above, now with added context.
 
 *Optionally, add the Umbraco CMS source directory with `/add-dir /path/to/umbraco`*
 
+After this section, run `/init` to generate a CLAUDE.md file and copy this into both section 3 and 4 folders
+
 > [!NOTE]
-> A single test run took ~20 min and ~560k tokens.
-> A single test run with the CMS source dir added took ~22 min and ~550k tokens.
+> A single test run with took ~17 min and ~187k tokens. With the CMS source dir added took ~18 min and ~184k tokens, and it chose to run Playwright too.
+
+### Example outcome
+![alt text](assets/image2.png)
+![alt text](assets/image3.png)
 
 ## Section 3: With Harness
 ```bash
@@ -41,7 +50,7 @@ Run the same prompt as above, now with added context.
 ```
 
 > [!NOTE]
-> A single test run took ~30 min and ~550k tokens
+> A single test run with a CLAUDE.md took ~12 min and ~140k tokens
 
 After the run, give it the following prompt:
 ```
@@ -49,6 +58,9 @@ Create a PRD document based on what you have implemented, a small set of user st
 ```
 
 Copy the created files into `section-4-with-loop` folder.
+
+### Example outcome
+![alt text](assets/image4.png)
 
 ## Section 4: With Loop
 Combining all the things we've learnt so far, run the following prompt:
@@ -67,10 +79,8 @@ Run until you've satisfied the PRD requirements.
 ```
 
 > [!NOTE]
-> A single test run without `/goal` took ~22 min and ~720k tokens
-> A single test run with `/goal` took ~27 min and ~790k tokens
-> A single test run with `/goal` and the CMS source added took ~X min and ~Xk tokens - only one that decided to do E2E verification.
+> A single test run without `/goal` took ~15 min and ~170k tokens
+> A single test run with `/goal` took ~24 min and ~535k tokens
 
-TBD:
-- Skill to route in the test helpers
-- Validation
+### Example outcome
+![alt text](assets/image5.png)
