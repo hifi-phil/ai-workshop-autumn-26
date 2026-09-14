@@ -73,14 +73,14 @@ You can optionally point it at the Umbraco CMS source first. Use `/add-dir /path
 /init
 ```
 
-This creates a `CLAUDE.md` file. Those are notes the agent reads every time. t.
+This creates a `CLAUDE.md` file. These are notes about the project that the agent reads every time.
 
 ```
 Create a PRD using the prd-writer skill as a document in the /docs folder. 
-Create this based on what has been implemented so far here.
+Create this based on what has been implemented so far in this run through.
 ```
 
-The second makes a PRD (product requirements document). That is a plan of what has been (and will be built) be built.
+The second makes a PRD (product requirements document). That is a plan of what has been (and will be) built.
 
 **Carry forward:** check both documents are correct. Then copy them into Sections 3 and 4.
 
@@ -98,8 +98,8 @@ The second makes a PRD (product requirements document). That is a plan of what h
 
 **The point:** teach the agent about Umbraco itself. Then it stops guessing.
 
-**What is new:** the Claude.md and PRD you copied in from Section 2. Plus the Umbraco skills. 
-Those are short how-to files the agent can pull in when it needs them.
+**What is new:** the Claude.md and PRD you copied in from Section 2. 
+Plus the Umbraco skills. Those are short how-to files and documentation the agent can use when it needs to understand the latest best practice.
 
 Install the skills first:
 
