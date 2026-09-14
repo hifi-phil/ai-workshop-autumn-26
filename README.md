@@ -124,10 +124,9 @@ done.
 /harness-retro
 ```
 
-It's installed at `section-3-with-harness/.claude/skills/harness-retro` — it mines what just
-happened for friction and drafts a lean skill from it, rather than a one-shot guess at "what
-did I learn." Running it mid-build gives it an unfinished task to retro on, so wait for the
-build to actually be done first.
+It's installed at `section-3-with-harness/.claude/skills/harness-retro` - it mines what just
+happened for friction and drafts a skill as part of the harness from it, rather than a one-shot guess at "what
+did I learn." 
 
 **Carry forward:** check the new skill(s) are right and fix them. Then copy them — and
 `harness-retro` itself — into `section-4-with-loop/.claude/skills`, so the next stage can
