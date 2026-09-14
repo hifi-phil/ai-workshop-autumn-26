@@ -11,7 +11,7 @@ Also include a table of 'Flagged nodes' with the stale node's last edited date, 
 At each level, more information is added for the agent to use to generate a more accurate and context-aware response.
 
 ## Section 1: Prompt Only
-Run the above prompt in a Claude session in the `/section-1-prompt-only` directory.
+Run the above prompt in a Claude session in the `/section-1-prompt-only` directory. Take a screenshot of what it generates and post it in #agentic-developer-workshop on Slack.
 
 > [!NOTE]
 > Test run timing: 
@@ -23,11 +23,17 @@ Run the above prompt in a Claude session in the `/section-1-prompt-only` directo
 ## Section 2: With Context
 A design has been created and can be found in the `design-assets` folder. This is automatically added to the context when running Claude in the `/section-2-with-context` directory.
 
-Run the same prompt as above, now with added context.
+Run the same prompt as section 1, now with added context.
 
 *Optionally, add the Umbraco CMS source directory with `/add-dir /path/to/umbraco`*
 
-After this section, run `/init` to generate a CLAUDE.md file and copy this into both section 3 and 4 folders
+After this section, run `/init` to generate a CLAUDE.md, and pass it the following prompt:
+
+```
+Create a PRD document based on what you have implemented
+```
+
+Once the CLAUDE.md and PRD docs are created, review them both for correctness and copy them into both the `section-3-with-harness` and `section-4-with-loop` folders.
 
 > [!NOTE]
 > A single test run with took ~17 min and ~187k tokens. With the CMS source dir added took ~18 min and ~184k tokens, and it chose to run Playwright too.
@@ -38,10 +44,9 @@ After this section, run `/init` to generate a CLAUDE.md file and copy this into 
 
 ## Section 3: With Harness
 ```bash
+# Add Umbraco CMS Backoffice Skills marketplace
 /plugin marketplace add umbraco/Umbraco-CMS-Backoffice-Skills
-```
 
-```bash
 # Install backoffice extension skills (58 skills)
 /plugin install umbraco-cms-backoffice-skills@umbraco-backoffice-marketplace
 
@@ -54,10 +59,10 @@ After this section, run `/init` to generate a CLAUDE.md file and copy this into 
 
 After the run, give it the following prompt:
 ```
-Create a PRD document based on what you have implemented, a small set of user stories and and a small batch of SKILL.md files that would make this a better process
+Create a small batch of SKILL.md files that would make this a better process
 ```
 
-Copy the created files into `section-4-with-loop` folder.
+Review and edit the skills for correctness, then copy the created files into `section-4-with-loop` folder.
 
 ### Example outcome
 ![alt text](assets/image4.png)
