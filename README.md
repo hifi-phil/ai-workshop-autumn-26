@@ -1,6 +1,6 @@
 # Agentic Developer Workshop: Content Audit
 
-Each folder gives the agent more to work with along; prompt, contex, harness, loop. The output gets better each time. The cost and time taken changes each time.
+Each folder gives the agent more to work with along; prompt, context, harness, loop. The output gets better each time. The cost and time taken changes each time.
 
 Run the sections in order. Each one hands something to the next.
 
@@ -52,7 +52,7 @@ One run of each. Yours will differ.
 ![Section 1 dashboard, built from the prompt alone](assets/image.png)
 
 Each version created will be slightly different.  
-Upload a screenshot to the #agentic-developer-workshop show we can see how they change on each run.
+Upload a screenshot to the #agentic-developer-workshop so that we can all can see how the outcome changes on each run.
 
 ---
 
@@ -61,7 +61,7 @@ Upload a screenshot to the #agentic-developer-workshop show we can see how they 
 **The point:** give the agent a design to follow. Otherwise it makes one up.
 
 **What is new:** a pre built Claude Design output sits in the `design-assets` folder at the repo root.  
-The section's `.claude/settings.json` lets Claude read that folder. It still has to go and look. Say so in the prompt if it does not.
+The section's `.claude/settings.json` add this folder to Claude's context. It still has to go and look. Say so in the prompt if it does not.
 
 **Run:** open Claude in `section-2-with-context`. Paste the same prompt.
 
