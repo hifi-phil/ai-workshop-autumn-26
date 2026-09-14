@@ -1,6 +1,6 @@
 # Agentic Developer Workshop: Content Audit
 
-Each folder gives the agent more to work with. The output gets better each time. The cost moves around.
+Each folder gives the agent more to work with along; prompt, contex, harness, loop. The output gets better each time. The cost and time taken changes each time.
 
 Run the sections in order. Each one hands something to the next.
 
@@ -51,17 +51,21 @@ One run of each. Yours will differ.
 
 ![Section 1 dashboard, built from the prompt alone](assets/image.png)
 
+Each version created will be slightly different.  
+Upload a screenshot to the #agentic-developer-workshop show we can see how they change on each run.
+
 ---
 
 ## Section 2: With context
 
 **The point:** give the agent a design to follow. Otherwise it makes one up.
 
-**What is new:** a design sits in the `design-assets` folder at the repo root. The section's `.claude/settings.json` lets Claude read that folder. It still has to go and look. Say so in the prompt if it does not.
+**What is new:** a pre built Claude Design output sits in the `design-assets` folder at the repo root.  
+The section's `.claude/settings.json` lets Claude read that folder. It still has to go and look. Say so in the prompt if it does not.
 
 **Run:** open Claude in `section-2-with-context`. Paste the same prompt.
 
-You can also point it at the Umbraco CMS source first. Use `/add-dir /path/to/umbraco`.
+You can optionally point it at the Umbraco CMS source first. Use `/add-dir /path/to/umbraco`.
 
 **Then:** when it finishes, make the two documents that Sections 3 and 4 need.
 
@@ -69,13 +73,16 @@ You can also point it at the Umbraco CMS source first. Use `/add-dir /path/to/um
 /init
 ```
 
+This creates a `CLAUDE.md` file. Those are notes the agent reads every time. t.
+
 ```
-Create a PRD document based on what you have implemented
+Create a PRD using the prd-writer skill as a document in the /docs folder. 
+Create this based on what has been implemented so far here.
 ```
 
-The first makes a `CLAUDE.md`. Those are notes the agent reads every time. The second makes a PRD. That is a plan of what got built.
+The second makes a PRD (product requirements document). That is a plan of what has been (and will be built) be built.
 
-**Carry forward:** check both documents are right. Then copy them into Sections 3 and 4.
+**Carry forward:** check both documents are correct. Then copy them into Sections 3 and 4.
 
 - `CLAUDE.md` goes in the top of `section-3-with-harness` and `section-4-with-loop`
 - the PRD goes in a `docs` folder inside each of those. The Section 4 prompt looks there
@@ -91,7 +98,8 @@ The first makes a `CLAUDE.md`. Those are notes the agent reads every time. The s
 
 **The point:** teach the agent about Umbraco itself. Then it stops guessing.
 
-**What is new:** the notes and plan you copied in from Section 2. Plus the Umbraco skills. Those are short how-to files the agent can pull in when it needs them.
+**What is new:** the Claude.md and PRD you copied in from Section 2. Plus the Umbraco skills. 
+Those are short how-to files the agent can pull in when it needs them.
 
 Install the skills first:
 
