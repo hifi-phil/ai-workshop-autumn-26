@@ -156,7 +156,7 @@ Also include a table of 'Flagged nodes' with the node's path in the content tree
 
 Use the `docs` folder files to help guide the implementation and ensure all requirements are met.
 
-Run until you've satisfied the PRD requirements.
+Run until you've satisfied the PRD requirements. Validate in the browser.
 ```
 
 ### Example outcome
