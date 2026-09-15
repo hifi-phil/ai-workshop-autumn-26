@@ -114,15 +114,23 @@ Install the skills first:
 /plugin install umbraco-cms-backoffice-testing-skills@umbraco-backoffice-marketplace
 ```
 
-**Run:** open Claude in `section-3-with-harness`. Paste the same prompt again.
+**Run:** open Claude in `section-3-with-harness`. Paste the same prompt again, and let it
+finish the whole build — don't move on to the next step until the dashboard is actually
+done.
 
-**Then:** ask it to write down what it learned.
+**Then, once the build has finished (not before):** run the retro.
 
 ```
-Create a small batch of SKILL.md files that would make this a better process
+/harness-retro
 ```
 
-**Carry forward:** check the new skills are right and fix them. Then copy them into `section-4-with-loop/.claude/skills`.
+It's installed at `section-3-with-harness/.claude/skills/harness-retro` - it mines what just
+happened for friction and drafts a skill as part of the harness from it, rather than a one-shot guess at "what
+did I learn." 
+
+**Carry forward:** check the new skill(s) are right and fix them. Then copy them — and
+`harness-retro` itself — into `section-4-with-loop/.claude/skills`, so the next stage can
+keep running its own retros too.
 
 ### Example outcome
 
